@@ -1,5 +1,5 @@
 <template>
-  <div x-data="{ success: window.location.search.substr(1) === 'success' }" class="d-flex flex-column">
+  <div class="d-flex flex-column">
     <div id="app" class=" container-fluid">
       <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
@@ -27,7 +27,7 @@
     </div>
 
     <div class="container-fluid flex-fill snow-back">
-      <div x-show="success" class="alert alert-success text-center fs-24 fw-bold" role="alert" style="display:none">
+      <div v-if="success" class="alert alert-success text-center fs-24 fw-bold" role="alert" style="display:none">
         Registro guardado exitosamente
       </div>
 
@@ -48,7 +48,7 @@
         </p>
 
         <div class="col-12 mintcream-back px-0 mx-0 pt-3 pb-5">
-          <form action="./form?success" method="POST" class="mx-auto">
+          <form method="POST" class="mx-auto" @submit.prevent="showSuccessMessage">
             <h4 class="col-12 col-sm-10 offset-sm-1 col-md-8 col-lg-10 offset-lg-1 metropolis fw-bold fs-24 mt-4 mt-lg-5 mx-auto ml-lg-1">
               REGISTRA TU ASISTENCIA
             </h4>
@@ -154,5 +154,18 @@
 
 <script>
 import '../assets/app.css'
-export default {}
+export default {
+  data () {
+    return {
+      success: false
+    }
+  },
+  methods: {
+    showSuccessMessage () {
+      this.success = true
+
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+}
 </script>

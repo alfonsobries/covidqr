@@ -16,15 +16,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' }
-    ],
-    script: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js',
-        defer: 'defer'
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.min.js'
-      }
     ]
   },
 
