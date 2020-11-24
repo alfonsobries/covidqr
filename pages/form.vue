@@ -4,7 +4,7 @@
       <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
           <a class="navbar-brand mx-auto ml-md-1" href="#">
-            <img src="images/brand.svg" class="brand-logo-cdmx">
+            <img src="/images/brand.svg" class="brand-logo-cdmx">
           </a>
           <div id="navbarSupportedContent ml-3" class="collapse navbar-collapse bar">
             <div class="linea auto-hide pl-2" />
@@ -15,7 +15,7 @@
           <ul class="navbar-nav mx-auto ml-md-auto my-2 my-md-0">
             <li class="nav-item">
               <a class="nav-link text-center" href="#background-image">
-                <img src="images/btn-llave-sm.png" title="Iniciar sesión con Llave CDMX">
+                <img src="/images/btn-llave-sm.png" title="Iniciar sesión con Llave CDMX">
               </a>
               <div class="tx-crea-cuenta">
                 ¿Aún no tienes cuenta? <a href="#" target="_blank">Crea una</a><p />
@@ -129,7 +129,7 @@
 
     <footer class="d-flex align-items-center flex-wrap flex-lg-nowrap">
       <div class="col-12 col-lg-4 text-center">
-        <img class="img-footer brand-logo-cdmx pi-footer" src="images/adip-footer.svg" alt="">
+        <img class="img-footer brand-logo-cdmx pi-footer" src="/images/adip-footer.svg" alt="">
       </div>
       <div class="col-12 col-lg-4 text-center text-lg-left white">
         <p class="label-footer">
