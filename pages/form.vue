@@ -27,7 +27,7 @@
     </div>
 
     <div class="container-fluid flex-fill snow-back">
-      <div v-if="success" class="alert alert-success text-center fs-24 fw-bold" role="alert" style="display:none">
+      <div v-if="success" class="alert alert-success text-center fs-24 fw-bold" role="alert">
         Registro guardado exitosamente
       </div>
 
@@ -79,10 +79,10 @@
         </h4>
         <div class="col d-flex flex-wrap datos-negocio">
           <div class="col-12 col-lg-6">
-            <span>Fecha de registro:</span> 02-07-2020
+            <span>Fecha de registro:</span> {{ today }}
           </div>
           <div class="col-12 col-lg-6">
-            <span>Folio de registro:</span> PGHNN/02072020/875/016193
+            <span>Folio de registro:</span> PGHNN/111111/111/0161111193
           </div>
           <div class="col-12 col-lg-6">
             <span>Actividad económica:</span> Comercio al por menor de ropa, excepto de bebé y lencería
@@ -95,10 +95,10 @@
             Matriz
           </h4>
           <div class="col-12 col-lg-6">
-            <span>Nombre:</span> ROBUSTAE MEXICO S.A. DE C.V. (LEFTIES)
+            <span>Nombre:</span> Wharever SA de CV.
           </div>
           <div class="col-12 col-lg-6">
-            <span>Teléfono:</span> 5520952362
+            <span>Teléfono:</span> 55 3322 2222
           </div>
           <div class="col-12 col-lg-6">
             <span>Domicilio:</span> Av. Miguel Angel de Quevedo #227, Colonia Romero de Terreros, Alcaldía Coyoacán
@@ -156,8 +156,10 @@
 import '../assets/app.css'
 export default {
   data () {
+    const date = new Date()
     return {
-      success: false
+      success: false,
+      today: `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
     }
   },
   methods: {
